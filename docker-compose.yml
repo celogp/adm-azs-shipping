@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: freightsDB
-      SPRING_FLYWAY_ENABLED: true
+      SPRING_FLYWAY_ENABLED: "true"
     ports:
       - "5432:5432"
     #volumes:
@@ -17,6 +17,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: celogp/adm-azs-shipping-app:latest
     container_name: shipping-app
     restart: always
     ports:
